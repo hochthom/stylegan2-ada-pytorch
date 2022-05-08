@@ -159,7 +159,7 @@ def images(G,device,inputs,space,truncation_psi,label,noise_mode,outdir,start=No
         tp_i = (stop-start)/len(inputs)
 
     for idx, i in enumerate(inputs):
-        print('Generating image for frame %d/%d ...' % (idx, len(inputs)))
+        print('Generating image for frame %d/%d ...' % (idx + 1, len(inputs)))
         
         if (space=='z'):
             z = torch.from_numpy(i).to(device)
